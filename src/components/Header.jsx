@@ -1,9 +1,11 @@
 // import { useState } from "react";
+import Canvas from "./Canvas";
 
 export default function Header() {
     return (
-        <section className="bg-gray-900 backdrop-blur-lg z-0">
-            <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+        <section className="bg-gray-900 backdrop-filter backdrop-blur-lg relative overflow-hidden z-5">
+            <Canvas className="absolute top-0 left-0 w-full h-full z-0"/>
+            <div className="py-10 px-5 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 relative z-10">
                 <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-white">
                     Hi, my name is <span className="text-orange-400">Sloan</span>
                 </h1>
@@ -15,6 +17,7 @@ export default function Header() {
                     </svg>
                 </a>
             </div>
+            <div className="absolute top-0 left-0 w-full h-full bg-gray-900/80 backdrop-filter backdrop-blur-lg z-0"></div>
         </section>
     );
 }
