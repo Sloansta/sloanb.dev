@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 export default function Nav() {
     // State to handle the visibility of the menu
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [hasScrolled, setHasScrolled] = useState(false);
+    const [hasScrolled, setHasScrolled] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -20,7 +20,7 @@ export default function Nav() {
     const menuClasses = "flex flex-col p-3 backdrop-filter backdrop-blur-[15px] md:flex-row md:space-x-8 md:mt-1 bg-gray-900/30 md:bg-transparent md:p-0";
 
     return (
-        <nav className={`bg-gray-800/10 border-orange-300 rounded-lg dark:bg-gray-900/30 ${hasScrolled ? 'fixed top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-[20px]' : 'relative'}`}>
+        <nav className={`bg-gray-800/10 border-orange-300 rounded-lg dark:bg-gray-900/30 top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-[20px] fixed`}>
             <div className="max-w-screen-xl mx-auto p-4 flex items-center justify-between">
                 <a href="#" className="flex items-center">
                     <span className="self-center text-2xl font-semibold whitespace-nowrap text-orange-400 drop-shadow-md">Sloan Boyce</span>
@@ -41,7 +41,7 @@ export default function Nav() {
                 <div className={dropdownClasses} id="navbar-default">
                     <ul className={`${menuClasses}`}>
                         <li>
-                            <a href="#" className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/30 rounded md:p-2 md:mt-0">About</a>
+                            <a href="#" className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/30 rounded md:p-2 md:mt-0">Skills</a>
                         </li>
                         <li>
                             <a href="#" className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/30 rounded md:p-2 md:mt-0">Work</a>
