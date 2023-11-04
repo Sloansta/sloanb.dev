@@ -1,5 +1,33 @@
 import SkillCard from "../components/SkillCard"
 
+const cards = [
+    {
+        skillName: "Frontend Development",
+        details: "React,  JS/TS, Vue, Svelte, Svelte-Kit",
+        borderColor: "bg-orange-500"
+    }, 
+    {
+        skillName: "Backend Development",
+        details: "Node, Express, C#/.NET, MySQL, NoSQL",
+        borderColor: "bg-purple-500"
+    }, 
+    {
+        skillName: "Mobile Development",
+        details: "Dart, Flutter, Swift, SwiftUI",
+        borderColor: "bg-blue-500"
+    },
+    {
+        skillName: "Full Stack!", 
+        details: "Bringing it all together as one!",
+        borderColor: "bg-green-500"
+    }, 
+    {
+        skillName: "Bilingual Translation",
+        details: "Japanese to English translation",
+        borderColor: "bg-yellow-500"
+    }
+]
+
 export default function Skills() {
     return (
         <div className="flex row md:column">
@@ -12,10 +40,13 @@ export default function Skills() {
                 </span>
                 <div className="mt-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        <SkillCard skillName={"Frontend Development"} details={"React, JS/TS, Vue, Svelte, Svelte-Kit"} backOfCard={"orange"} borderColor="bg-orange-500" />
-                        <SkillCard skillName={"Backend Development"} details={"Node, Express, C#, MySQL, NoSQL"} backOfCard={"purple"} borderColor="bg-purple-500" />
-                        <SkillCard skillName={"Mobile Development"} details={"Dart, Flutter, Swift, SwiftUI"} backOfCard={"blue"} borderColor="bg-blue-500" />
-                        <SkillCard skillName={"Full Stack!"} details={"Bringing everything together as one!"} backOfCard={"green"} borderColor="bg-green-500" />
+                        {cards.map((card) => (
+                            <SkillCard 
+                                skillName={card.skillName}
+                                details={card.details}
+                                borderColor={card.borderColor}
+                            /> 
+                        ))}
                     </div>
                 </div>
             </div>

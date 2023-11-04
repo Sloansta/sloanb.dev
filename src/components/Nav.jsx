@@ -15,12 +15,10 @@ export default function Nav() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const dropdownClasses = `absolute top-full left-0 w-full z-10 bg-gray-800/25 rounded-lg backdrop-filter backdrop-blur-[15px] md:bg-transparent md:static md:block ${isMenuOpen ? 'block' : 'hidden'} md:flex md:justify-end`;
-    
-    const menuClasses = "flex flex-col p-3 backdrop-filter backdrop-blur-[15px] md:flex-row md:space-x-8 md:mt-1 bg-gray-900/30 md:bg-transparent md:p-0";
-
+    const dropdownClasses = `absolute top-full left-0 w-full z-50 bg-gray-800/10 rounded-lg backdrop-filter backdrop-blur-[20px] md:bg-transparent md:static md:block ${isMenuOpen ? 'block' : 'hidden'} md:flex md:justify-end`;    
+    const menuClasses = "flex flex-col p-3 backdrop-filter backdrop-blur-[20px] z-50 md:flex-row md:space-x-8 md:mt-1 md:bg-transparent md:p-0";    
     return (
-        <nav className={`bg-gray-800/10 border-orange-300 rounded-lg dark:bg-gray-900/30 top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-[20px] fixed`}>
+        <nav className={`bg-gray-800/10 border-orange-300 rounded-lg top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-[20px] fixed`}>
             <div className="max-w-screen-xl mx-auto p-4 flex items-center justify-between">
                 <a href="#" className="flex items-center">
                     <span className="self-center text-2xl font-semibold whitespace-nowrap text-orange-400 drop-shadow-md">Sloan Boyce</span>
