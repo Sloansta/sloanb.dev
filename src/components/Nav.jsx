@@ -15,10 +15,10 @@ export default function Nav() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const dropdownClasses = `absolute top-full left-0 w-full z-50 bg-gray-800/10 rounded-lg backdrop-filter backdrop-blur-[20px] md:bg-transparent md:static md:block ${isMenuOpen ? 'block' : 'hidden'} md:flex md:justify-end`;    
-    const menuClasses = "flex flex-col p-3 backdrop-filter backdrop-blur-[20px] z-50 md:flex-row md:space-x-8 md:mt-1 md:bg-transparent md:p-0";    
+    const dropdownClasses = `absolute top-full left-0 w-full z-50 bg-gray-900/95 rounded-lg md:static md:block ${isMenuOpen ? 'block' : 'hidden'} md:flex md:justify-end`;    
+    const menuClasses = "flex flex-col p-3 z-50 z-50 md:flex-row md:space-x-8 md:mt-1 md:p-0 text-center ";    
     return (
-        <nav className={`bg-gray-800/10 border-orange-300 rounded-lg top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-[20px] fixed`}>
+        <nav className={` border-orange-300 rounded-lg top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-[20px] fixed`}>
             <div className="max-w-screen-xl mx-auto p-4 flex items-center justify-between">
                 <a href="#" className="flex items-center">
                     <span className="self-center text-2xl font-semibold whitespace-nowrap text-orange-400 drop-shadow-md">Sloan Boyce</span>
@@ -39,7 +39,7 @@ export default function Nav() {
                 <div className={dropdownClasses} id="navbar-default">
                     <ul className={`${menuClasses}`}>
                         <li>
-                            <a href="#" className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/30 rounded md:p-2 md:mt-0">Skills</a>
+                            <a className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/30 rounded md:p-2 md:mt-0">Skills</a>
                         </li>
                         <li>
                             <a href="#" className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/30 rounded md:p-2 md:mt-0">Work</a>
