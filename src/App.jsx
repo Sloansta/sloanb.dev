@@ -2,6 +2,7 @@ import Nav from "./components/Nav"
 import Header from "./Layout/Header"
 import Skills from "./Layout/Skills"
 import Work from "./Layout/Work"
+import About from "./Layout/About"
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Skills />
       <Work />
+      <About />
     </div>
   )
 }

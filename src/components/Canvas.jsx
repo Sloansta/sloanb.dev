@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 
-const Canvas = props => {
+const Canvas = ({isFooter, ...props}) => {
     const canvasRef = useRef(null);
 
     class Circle {
@@ -61,6 +61,26 @@ const Canvas = props => {
         });
     };
 
+    const drawPulsatingLines = (ctx, canvasWidth, canvasHeight, frameCount) => {
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight); 
+        ctx.lineWidth = 2; 
+        const linesCount = 10; 
+        const maxAmplitude = 20; 
+        const frequency = 0.02; 
+
+        for (let i = 0; i < linesCount; i++) {
+            const amplitude = maxAmplitude * Math.sin(frameCount * frequency + i);
+            const colorValue = Math.floor(Math.sin(frameCount * frequency + i) * 128 + 127);
+            const color = `rgb(${colorValue}, ${255 - colorValue}, 128)`;
+            ctx.strokeStyle = color;
+            
+            ctx.beginPath();
+            ctx.moveTo(0, canvasHeight / linesCount * i + amplitude);
+            ctx.lineTo(canvasWidth, canvasHeight / linesCount * i - amplitude);
+            ctx.stroke();
+        }
+    };
+
     useEffect(() => {
         const canvas = canvasRef.current;
         canvas.width = canvas.offsetWidth;
@@ -70,7 +90,11 @@ const Canvas = props => {
         const circles = createCircles(10, canvas.width, canvas.height); 
 
         const render = () => {
-            draw(context, circles);
+            if(!isFooter)
+                draw(context, circles);
+            else 
+                drawPulsatingLines(context, canvas.width, canvas.height, animationFrameId)
+
             animationFrameId = window.requestAnimationFrame(render);
         };
 
