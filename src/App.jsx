@@ -1,6 +1,7 @@
 import Nav from "./components/Nav"
 import Header from "./Layout/Header"
 import Skills from "./Layout/Skills"
+import Work from "./Layout/Work"
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <Nav />
       <Header />
       <Skills />
+      <Work />
     </div>
   )
 }

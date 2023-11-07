@@ -15,7 +15,7 @@ export default function Nav() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const dropdownClasses = `absolute top-full left-0 w-full z-50 bg-gray-900/95 rounded-lg md:static md:block ${isMenuOpen ? 'block' : 'hidden'} md:flex md:justify-end`;    
+    const dropdownClasses = `absolute top-full left-0 w-full z-50 rounded-lg md:static md:block ${isMenuOpen ? 'block' : 'hidden'} md:flex md:justify-end`;    
     const menuClasses = "flex flex-col p-3 z-50 z-50 md:flex-row md:space-x-8 md:mt-1 md:p-0 text-center ";    
     return (
         <nav className={` border-orange-300 rounded-lg top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-[20px] fixed`}>
