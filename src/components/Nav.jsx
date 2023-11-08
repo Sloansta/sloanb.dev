@@ -17,7 +17,7 @@ export default function Nav() {
     }, []);
 
     const dropdownClasses = `absolute top-full left-0 w-full z-50 rounded-lg md:static md:block ${isMenuOpen ? 'block' : 'hidden'} md:flex md:justify-end`;
-    const menuClasses = "flex flex-col p-3 z-50 z-50 md:flex-row md:space-x-8 md:mt-1 md:p-0 text-center ";
+    const menuClasses = "flex flex-col p-3 z-50 z-50 md:flex-row md:space-x-8 md:mt-1 md:p-0 text-center";
     return (
         <nav className={` border-orange-300 rounded-lg top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-[20px] fixed`}>
             <div className="max-w-screen-xl mx-auto p-4 flex items-center justify-between">
@@ -39,20 +39,20 @@ export default function Nav() {
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div className={dropdownClasses} id="navbar-default">
+                <div className={`${dropdownClasses} bg-gray-700/70`} id="navbar-default">
                     <ul className={`${menuClasses}`}>
                         <li className="hover:cursor-pointer">
-                            <Link to="skills" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/30 rounded md:p-2 md:mt-0">
+                            <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="skills" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/70 rounded md:p-2 md:mt-0">
                                 Skills
                             </Link>
                         </li>
                         <li className="hover:cursor-pointer">
-                            <Link to="work" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/30 rounded md:p-2 md:mt-0">
+                            <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="work" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/70 rounded md:p-2 md:mt-0">
                                 Work
                             </Link>
                         </li>
                         <li className="hover:cursor-pointer">
-                            <Link to="about" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/30 rounded md:p-2 md:mt-0">
+                            <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="about" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/70 rounded md:p-2 md:mt-0">
                                 Contact
                             </Link>
                         </li>
