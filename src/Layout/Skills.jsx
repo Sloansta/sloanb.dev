@@ -69,9 +69,9 @@ const cards = [
     }
 ]
 
-export default function Skills() {
+export default function Skills({ id }) {
     return (
-        <div className="flex row md:column">
+        <div className="flex row md:column" id={id}>
             <div className="py-10 px-5 mx-auto text-center">
                 <h1 className="mb-4 text-3xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl text-white">
                     Here is what Sloan can do

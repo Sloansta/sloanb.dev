@@ -3,9 +3,9 @@ import Canvas from "../components/Canvas";
 import githubIcon from '../assets/github.svg'
 import linkedInIcon from '../assets/linked-in.svg'
 
-export default function About() {
+export default function About({ id }) {
     return (
-        <section className="relative overflow-hidden">
+        <section id={id} className="relative overflow-hidden">
             <Canvas isFooter={true} className="absolute top-0 left-0 w-full h-full z-0" />
             <div className="container mx-auto px-3 pb-40 pt-1 relative z-10 mb-auto text-center">
                 <h1 className="text-3xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl text-white pt-2">

@@ -1,8 +1,8 @@
 import Canvas from "../components/Canvas";
 
-export default function Header() {
+export default function Header({ id }) {
     return (
-        <section className="bg-gray-900 backdrop-filter backdrop-blur-lg relative overflow-hidden z-5">
+        <section id={id} className="bg-gray-900 backdrop-filter backdrop-blur-lg relative overflow-hidden z-5">
             <Canvas className="absolute top-0 left-0 w-full h-full z-0" isFooter={false}/>
             <div className="flex flex-col justify-evenly items-center h-screen relative z-10 px-5">
                 <div className="text-center mt-52 md:mt-40">

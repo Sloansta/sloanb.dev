@@ -50,9 +50,9 @@ const cards = [
 ]
 
 
-export default function Work() {
+export default function Work({ id }) {
     return (
-        <div className="flex row md:column bg-gray-900">
+        <div id={id} className="flex row md:column bg-gray-900">
             <div className="py-10 pb-48 px-5 mx-auto text-center">
                 <h1 className="mb-4 text-3xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl text-white">
                     Sloan's Career 

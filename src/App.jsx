@@ -3,16 +3,18 @@ import Header from "./Layout/Header"
 import Skills from "./Layout/Skills"
 import Work from "./Layout/Work"
 import About from "./Layout/About"
+import Footer from "./components/Footer"
 
 function App() {
 
   return (
     <div className="bg-gray-800">
       <Nav />
-      <Header />
-      <Skills />
-      <Work />
-      <About />
+      <Header id="home"/>
+      <Skills id="skills"/>
+      <Work id="work"/>
+      <About id="about"/>
+      <Footer />
     </div>
   )
 }
