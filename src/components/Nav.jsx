@@ -39,7 +39,7 @@ export default function Nav() {
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div className={`${dropdownClasses} bg-gray-700/70`} id="navbar-default">
+                <div className={`${dropdownClasses} ${isMenuOpen ? 'bg-gray-700/70' : 'bg-inherit'}`} id="navbar-default">
                     <ul className={`${menuClasses}`}>
                         <li className="hover:cursor-pointer">
                             <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="skills" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/70 rounded md:p-2 md:mt-0">
