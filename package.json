@@ -2,7 +2,7 @@
   "name": "sloanboyce.dev",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://sloansta.github.io/sloanb.dev",
+  "homepage": "https://sloansta.github.io/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
