@@ -1,7 +1,6 @@
 // ... other imports
 import Canvas from "../components/Canvas";
 import githubIcon from '../assets/github.svg'
-import linkedInIcon from '../assets/linked-in.svg'
 
 export default function About({ id }) {
     return (
@@ -17,7 +16,7 @@ export default function About({ id }) {
                 <p className="text-left tracking-wide leading-none mt-5 text-gray-400 lg:px-20 text-xl font-normal">
                     If you made it this far down in the site then you know that I'm Sloan.
                     I am a Software Developer based in Michigan. I never really knew I was going to be a developer until I had already become one.
-                    My journy with code started with attempting to make things like the background you're looking at right now, and games.
+                    My journey with code started with attempting to make things like the background of this section, and games.
                     Code was just a medium to make art, or interactive experiences for people to enjoy. In a way, development chose me, and I am happy that it did.
                     Other than writing code, I do quite a few things like weight training, language learning, and a fair bit of gaming. I also have a cat named Myla who I love dearly.
                     If you think this site is neat, or just want to connect, please feel free using the links below!
