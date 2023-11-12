@@ -42,17 +42,17 @@ export default function Nav() {
                 <div className={`${dropdownClasses} ${isMenuOpen ? 'bg-gray-700/70' : 'bg-inherit'}`} id="navbar-default">
                     <ul className={`${menuClasses}`}>
                         <li className="hover:cursor-pointer">
-                            <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="skills" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/70 rounded md:p-2 md:mt-0">
+                            <Link onClick={() => setIsMenuOpen(false)} to="skills" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/70 rounded md:p-2 md:mt-0">
                                 Skills
                             </Link>
                         </li>
                         <li className="hover:cursor-pointer">
-                            <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="work" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/70 rounded md:p-2 md:mt-0">
+                            <Link onClick={() => setIsMenuOpen(false)} to="work" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/70 rounded md:p-2 md:mt-0">
                                 Work
                             </Link>
                         </li>
                         <li className="hover:cursor-pointer">
-                            <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to="about" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/70 rounded md:p-2 md:mt-0">
+                            <Link onClick={() => setIsMenuOpen(false)} to="about" smooth={true} duration={500} offset={-45} className="block mt-2 py-2 pl-3 pr-4 text-orange-200 bg-gray-700/70 rounded md:p-2 md:mt-0">
                                 Contact
                             </Link>
                         </li>
